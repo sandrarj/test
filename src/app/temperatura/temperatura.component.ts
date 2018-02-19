@@ -38,8 +38,9 @@ export class TemperaturaComponent implements OnInit {
 
     this.getTemperaturas();
     this.temperature = this.historico;
-   
-    let timer = TimerObservable.create(180000,180000);
+    localStorage.setItem('todo',JSON.stringify( this.historico));
+
+    let timer = TimerObservable.create(500,180000);
 
     this.subscription = timer.subscribe(() => {
       this.temperature = this.getTemperaturas();
@@ -50,8 +51,7 @@ export class TemperaturaComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
-    //localStorage.clear;
+    //this.subscription.unsubscribe();
   }
 
 
