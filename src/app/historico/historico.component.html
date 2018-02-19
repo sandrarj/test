@@ -1,0 +1,26 @@
+
+
+<!--div class="panel panel-default"-->
+<div class="container">
+        <h2>{{id}}</h2>
+        <table class="table">
+          <thead>
+            <tr class="table-success table-fixed">
+              <th>Temperatura</th>
+              <th>min</th>
+              <th>max</th>
+              <th>time</th>  
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of micity ">
+              <td>{{item.main.temp}}</td>
+              <td>{{item.main.temp_min}}</td>
+              <td>{{item.main.temp_max}}</td>
+              <td>{{item.dt*1000 | date:'full' }}</td>
+            </tr>      
+            
+          </tbody>
+        </table>
+      </div>
+
