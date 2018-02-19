@@ -12,7 +12,7 @@ export class TemperaturaService {
   constructor(public http: HttpClient) { }
 
   getTemperatura(city,codigo): Observable<any> {
-    var cityurl = this.apiUrl +"q=" +city + ","+codigo+"&appid=0e051a27dd67424bfb24d68630bd8bf5";
+    var cityurl = this.apiUrl +"q=" +city + ","+codigo+"&appid=20481998f251b19136a9f3e7c3b4c277";
     console.log(cityurl);
    return this.http.get(cityurl);
  }
